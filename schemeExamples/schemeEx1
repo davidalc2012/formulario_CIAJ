@@ -1,0 +1,28 @@
+
+{
+	idForm: 1,
+	title: "Laboral",
+	version: "1.0",
+	date: "2018-11-14",
+	description: "Prueba 1",
+	question: [
+		{
+			id: 1.1,
+			text: "Nombre Completo",
+			description: "--",
+			type: "text",
+			doesRepeat: False,
+		},
+                {
+                        id: 1.2,
+                        text: "Edad",
+                        description: "--",
+                        type: number,
+			doesRepeat: False,
+                        limitations: [ 
+                                max: 1000,
+                                min: 500
+                        ]
+                }
+	]
+}

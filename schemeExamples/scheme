@@ -1,0 +1,35 @@
+
+{
+	idForm: ,
+	title: ,
+	version: ,
+	date: ,
+	description: ,
+	question: [
+		{
+			id: ,
+			text: ,
+			description: ,
+			type: ,
+			name: ,
+			placeholder: ,
+			
+			doesRepeat: ,
+			limitations: [
+				max: ,
+				min: 
+			]
+		},
+                {
+                        id: ,
+                        text: ,
+                        description: ,
+                        type: ,
+			doesRepeat: ,
+                        limitations: [ 
+                                max: ,
+                                min: 
+                        ]
+                }
+	]
+}
