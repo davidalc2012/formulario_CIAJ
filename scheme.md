@@ -6,7 +6,8 @@ La estructura está dividida en 3 objetos principales: **//TODO: ¿Son los únic
 
 * **General**: Incluye la información necesaria del formaluario
 * **Pregunta**: El objeto con la información necesaria para cada pregunta, esto también puede replicarse en preguntas anidadas. Este objeto será genérico e indiferente del nivel en el que se encuentre y contiene toda la información sobre el tipo de respuesta, limitaciones y objetos necesarios para su despliegue.
-* **Limitaciones**: Arreglo que contiene todas aquellas limitaciones a las que pueda ser sometido de validación alguna pregunta o funcionalidad específica.
+* **Limitaciones**: Arreglo que contiene todas aquellas limitaciones a las que pueda ser sometido de validación alguna pregunta o funcionalidad específica. En los casos de las limitaciones tipo boolean, si esta no es incluída se considerará False
+* **Condiciones**: Objeto que contiene las diferentes condiciones para bloquear, desbloquear, ocultar o mostrar un campo específico. **//TODO: Revisar si es necesario agregar condiciones para el comportamiento de los campos**
 
 ### General:
 
@@ -72,6 +73,7 @@ Información sobre la validación de cada campo específico
 | datetime |  |
 | datetime-local |  |
 | color |  |
+| output | Permite mostrar resultados del procesamiento de los demás campos mediante una función JS |  |
 
 ##### Tipos de limitaciones:
 
@@ -92,28 +94,31 @@ Información sobre la validación de cada campo específico
 | checked | Indica si el campo está activado | Boolean | checkbox, radiobutton |
 | disabled | Se usa para saber si el campo se encuentra desactivado | Boolean |  |
 | maxlength | Longitud máxima en caracteres de la respuesta | int | text, textarea, tel, email, password,  |
-| size |  |  |  |
-| src |  |  |  |
-| novalidate |  |  |  |
-| formnovalidate |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| size | Permite modificar el tamaño de los caractéres del campo. Revisar compatibilidad | int |  |
+| src | Dirección a la imagen a ser mostrada | String | image |
 
 #### repeatLimitations:
 
-Información sobre las limitaciones de la funcionalidad de repetición
+Información sobre las limitaciones de la funcionalidad de repetición. Sólo se toman en cuenta cuando el atributo doesRepeat es True.
 
-| Valor | Descripción | Tipo | Posibilidades |
+| Valor | Descripción | Tipo |
 |:----:|:----:|:----:|:----:|
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| minRepeats | Indica el número mínimo de repeticiones. Si no se incluye no hay número mínimo de repeticiones | int |
+| maxRepeats | Indica el número máximo de repeticiones. Si no se incluye no hay número máximo de repeticiones | int |
+|  |  |  |
 
+
+### Condiciones
+
+| Valor | Descripción |
+|:----:|:----:|:----:|
+| hideIfParent | Esconde si se cumple(n) la(s) condicion(es) para la pregunta padre |
+| showIfParent | Muestra si se cumple(n) la(s) condicion(es) para la pregunta padre |
+| blockIfParent | Bloquea si se cumple(n) la(s) condicion(es) para la pregunta padre |
+| unblockIfParent | Desbloquea si se cumple(n) la(s) condicion(es) para la pregunta padre |
+| hideIfChildren | Esconde si se cumple(n) la(s) condicion(es) para la(s) pregunta(s) hijo |
+| showIfChildren | Muestra si se cumple(n) la(s) condicion(es) para la(s) pregunta(s) hijo |
+| blockIfChildren | Bloquea si se cumple(n) la(s) condicion(es) para la(s) pregunta(s) hijo |
+| unblockIfChildren | Desbloquea si se cumple(n) la(s) condicion(es) para la(s) pregunta(s) hijo |
+| setIf | Asigna un valor específico |
+| deleteIf | Borra este campo del formulario. Esta acción no puede deshacerse |
