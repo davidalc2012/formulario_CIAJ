@@ -35,6 +35,8 @@ La estructura está dividida en 3 objetos principales: **//TODO: ¿Son los únic
 | limitations | Objeto que incluye las posibles limitaciones para la validación del campo | Object | {"min": #, "max": #} |
 | elements | En los casos de los campos que requieran un número limitado de respuestas se debe listar los elementos del mismo. Ej: select, list, etc | Array | ["A", "B", "C"] |
 
+**//TODO: Añadir manejo de campos repetidos en bloque**
+
 ### Limitaciones:
 
 #### limitations:
@@ -42,13 +44,63 @@ La estructura está dividida en 3 objetos principales: **//TODO: ¿Son los únic
 Información sobre la validación de cada campo específico
 
 ##### Tipo de campos: **//TODO: cehcar compatibilidad de tipos de campos para diferentes dispositivos y navegadores**
-| Campo | Descripción | Posibilidades |
+[input introduction](http://html5doctor.com/html5-forms-introduction-and-new-attributes/)
+[HTML5 Input Types](http://html5doctor.com/html5-forms-input-types/)
+[HTML Input types](https://html.com/attributes/input-type/)
+
+| Campo | Descripción |
+|:----:|:----:|
+| text | Campo de texto simple |
+| password | Entrada de texto en formato de contraseña |
+| checkbox |  |
+| radiobutton |  |
+| submit | Botón que ejecuta la acción para enviar el formulario |
+| button | Botón simple. Debe ligarse una acción de JavaScript |
+| file | Permite subir archivos al formulario |
+| hidden | Oculta el campo del formulario |
+| reset | Resetea el valor de todos los campos del formulario |
+| textarea | Permita la entrada de texto multilínea |
+| email |  |
+| url |  |
+| tel |  |
+| number |  |
+| range |  |
+| date |  |
+| month |  |
+| week |  |
+| time |  |
+| datetime |  |
+| datetime-local |  |
+| color |  |
+
+##### Tipos de limitaciones:
+
+| Valor | Descripción | Tipo | Input válidos |
 |:----:|:----:|:----:|:----:|
-| text |  |  |  |
-| password |  |  |  |
-| checkbox |  |  |  |
-| radio |  |  |  |
-| submit |  |  |  |
+| step | Saltos que se dará en la elección del número | float | number, range |
+| required | Define si el campo es obligatorio o no | Boolean |  |
+| readonly | Impide al usuario editar el campo | Boolean |  |
+| placeholder | Texto que muestra indicaciones sobre la información que debe ser introducida en el campo |  | text, textarea, email, url, tel |
+| pattern | Expresión regular que indica un aptrón para el texto introducido | String | text, textarea, email, tel, url |
+| multiple | Permite introduci varios elementos en un campo | Boolean | file, email, text |
+| min | Valor mínimo | Float, int | number, date, range |
+| max | Valor máximo | Float, int | number, date, range |
+| list | Permite añadir una lista de sugerencia de respuestas sin ser estas obligatorias | <datalist> <option>... | text, ... | [Atributo list](https://html.com/attributes/input-list/)
+| autofocus | Indica si este campo es seleccionado desde que carga | Boolean |  |
+| accesskey | Shortcut para ejecutar una acción específica | String |  |
+| autocomplete | Activar el autocompletamiento según entradas pasadas del usuario en campos similares | Boolean |  |
+| checked | Indica si el campo está activado | Boolean | checkbox, radiobutton |
+| disabled | Se usa para saber si el campo se encuentra desactivado | Boolean |  |
+| maxlength | Longitud máxima en caracteres de la respuesta | int | text, textarea, tel, email, password,  |
+| size |  |  |  |
+| src |  |  |  |
+| novalidate |  |  |  |
+| formnovalidate |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
