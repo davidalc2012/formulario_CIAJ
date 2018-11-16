@@ -102,16 +102,15 @@ Información sobre la validación de cada campo específico
 Información sobre las limitaciones de la funcionalidad de repetición. Sólo se toman en cuenta cuando el atributo doesRepeat es True.
 
 | Valor | Descripción | Tipo |
-|:----:|:----:|:----:|:----:|
+|:----:|:----:|:----:|
 | minRepeats | Indica el número mínimo de repeticiones. Si no se incluye no hay número mínimo de repeticiones | int |
 | maxRepeats | Indica el número máximo de repeticiones. Si no se incluye no hay número máximo de repeticiones | int |
-|  |  |  |
 
 
 ### Condiciones
 
 | Valor | Descripción |
-|:----:|:----:|:----:|
+|:----:|:----:|
 | hideIfParent | Esconde si se cumple(n) la(s) condicion(es) para la pregunta padre |
 | showIfParent | Muestra si se cumple(n) la(s) condicion(es) para la pregunta padre |
 | blockIfParent | Bloquea si se cumple(n) la(s) condicion(es) para la pregunta padre |
