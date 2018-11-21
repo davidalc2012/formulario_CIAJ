@@ -1,5 +1,10 @@
 import json
-with open('scheme.json') as file:
-    scheme = file.read()
+from pprint import pprint
 
-print(json.loads(scheme)['a'])
+with open('../schemeExamples/schemeEx1') as f:
+    data = json.load(f)
+
+pprint(data)
+print(data['date'])
+print(data['question'][0])
+print(data['question'][0]['text'])
