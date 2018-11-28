@@ -61,6 +61,7 @@ Información sobre la validación de cada campo específico
 | hidden | Oculta el campo del formulario |
 | reset | Resetea el valor de todos los campos del formulario |
 | textarea | Permita la entrada de texto multilínea |
+| select | Lista desplegable |
 | email |  |
 | url |  |
 | tel |  |
