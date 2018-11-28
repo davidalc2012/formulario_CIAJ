@@ -11,103 +11,150 @@
 			"description": "--",
 			"name": "nombre",
 			"placeholder": "Nombre + Apellido",
-			"type": "text",
-			"doesRepeat": "False"
+			"type": "text"
 		},
-                {
-                        "id": 1.2,
-                        "text": "Edad",
-                        "description": "--",
-                        "type": "number",
+        {
+            "id": 1.2,
+            "text": "Edad",
+            "description": "--",
+            "type": "number",
 			"name": "edad",
 			"placeholder": "Edad",
-			"doesRepeat": "False",
-                        "limitations": { 
-                                "max": 1000,
-                                "min": 500,
-				"required": "True"
-                        }
-                },
-                {
-                        "id": 1.3,
-                        "text": "Direccion",
-                        "description": "--",
-                        "type": "text",
-			"name": "direccion",
-			"placeholder": "Calle + Número",
-                        "doesRepeat": "False",
-                        "limitations": {
-                                "maxLength": 30
-                        }
-                },
-                {
-                        "id": 1.4,
-                        "text": "Edad range",
-                        "description": "--",
-                        "type": "range",
-                        "name": "Edad",
-                        "doesRepeat": "False",
-                        "limitations": {
-                                "max": 100,
-                                "min": 10
-                        }
-		},
-                {
-                        "id": 1.5,
-                        "text": "Email",
-                        "description": "--",
-                        "type": "email",
-                        "name": "email",
-                        "placeholder": "a@b.com",
-                        "doesRepeat": "False"
-                },
-                {
-                        "id": 1.6,
-                        "text": "Teléfonos",
-                        "description": "--",
-                        "type": "text",
-                        "name": "tels",
-                        "placeholder": "LADA + Número",
-                        "doesRepeat": "True",
-                        "repeatLimitations": {
-				"maxRepeats": 5
-			}
-                },
-                {
-                        "id": 1.7,
-                        "text": "Bloqueado",
-                        "description": "--",
-                        "type": "text",
-                        "name": "bloqueado",
-			"value": "Campo Bloqueado",
-                        "doesRepeat": "False"
-                },
-                {
-                        "id": 1.8,
-                        "text": "Lista",
-                        "description": "--",
-                        "type": "select",
-                        "name": "Lista",
-                        "doesRepeat": "False",
-                        "elements": [
-				"a",
-				"b",
-				"c",
-				"d"
-			]
-                },
-                {
-                        "id": 1.9,
-                        "text": "Checkbox",
-                        "description": "--",
-                        "type": "checkbox",
-                        "name": "Checkbox",
-			"doesRepeat": "False",
-                       	"elements": [
-				"1",
-				"2",
-				"3"
-			]
+                "limitations": { 
+                    "max": 1000,
+                    "min": 500,
+                    "required": "True"
                 }
-	]
+        },
+        {
+            "id": 1.3,
+            "text": "Direccion",
+            "description": "--",
+            "type": "text",
+            "name": "direccion",
+            "placeholder": "Calle + Número",
+            "limitations": {
+                    "maxLength": 30
+            }
+        },
+        {
+            "id": 1.4,
+            "text": "Edad range",
+            "description": "--",
+            "type": "range",
+            "name": "Edad",
+            "limitations": {
+                    "max": 100,
+                    "min": 10
+            }
+        },
+        {
+            "id": 1.5,
+            "text": "Email",
+            "description": "--",
+            "type": "email",
+            "name": "email",
+            "placeholder": "a@b.com"
+        },
+        {
+            "id": 1.6,
+            "text": "Teléfonos",
+            "description": "--",
+            "type": "text",
+            "name": "tels",
+            "placeholder": "LADA + Número",
+            "doesRepeat": "True",
+            "repeatLimitations": {
+                "maxRepeats": 5
+            }
+        },
+        {
+            "id": 1.7,
+            "text": "Bloqueado",
+            "description": "--",
+            "type": "text",
+            "name": "bloqueado",
+            "value": "Campo Bloqueado"
+        },
+        {
+            "id": 1.8,
+            "text": "Lista",
+            "description": "--",
+            "type": "select",
+            "name": "Lista",
+            "elements": [
+                "a",
+                "b",
+                "c",
+                "d"
+            ]
+        },
+        {
+            "id": 1.9,
+            "text": "Checkbox",
+            "description": "--",
+            "type": "checkbox",
+            "name": "Checkbox",
+            "elements": [
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "id": 1.10,
+            "text": "RadioButton",
+            "description": "--",
+            "type": "radio",
+            "name": "RadioButton",
+            "elements": [
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        {
+            "id": 1.11,
+            "text": "Fecha",
+            "description": "--",
+            "type": "date",
+            "name": "Fecha"
+        },
+        {
+            "id": 1.12,
+            "text": "Archivo",
+            "description": "--",
+            "type": "file",
+            "name": "file"
+        },
+        {
+            "id": 1.13,
+            "text": "Mes",
+            "description": "--",
+            "type": "month",
+            "name": "month"
+        },
+        {
+            "id": 1.14,
+            "text": "Contraseña",
+            "description": "--",
+            "type": "password",
+            "name": "passwd"
+        },
+        {
+            "id": 1.15,
+            "text": "Mes",
+            "description": "--",
+            "type": "textarea",
+            "name": "textarea",
+            "placeholder": "TextArea"
+        },
+        {
+            "id": 1.17,
+            "text": "Submit",
+            "description": "--",
+            "type": "submit",
+            "name": "submit"
+        }
+    ]
 }
